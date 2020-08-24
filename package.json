@@ -1,0 +1,17 @@
+{
+  "name": "@fr8/trading-channels",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/freight-trust/trading-channel.git",
+  "author": "SEE LICENSE",
+  "license": "MIT",
+  "scripts": {
+    "compile": "npx buidler compile --config buidler.compile.config.ts"
+  },
+  "dependencies": {
+    "@nomiclabs/buidler": "^1.4.3",
+    "@openzeppelin/contracts": "^3.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
