@@ -8,7 +8,7 @@ contract TradingChannelRegistry is IRegistry, Ownable {
     address[] public override entries;
 
     function addTradingChannel(address _tradingChannel) external override onlyOwner {
-        require(!inRegistry[_tradingChannel], "TradingChannelRegistry.addTradingChannel: POOL_ALREADY_IN_REGISTRY");
+        require(!inRegistry[_tradingChannel], "TradingChannelRegistry.addTradingChannel: PARTNER_ALREADY_IN_REGISTRY");
         entries.push(_tradingChannel);
         inRegistry[_tradingChannel] = true;
     }
@@ -18,9 +18,7 @@ contract TradingChannelRegistry is IRegistry, Ownable {
 
         inRegistry[registryAddress] = false;
 
-        // Move last to index location
         entries[_index] = entries[entries.length - 1];
-        // Pop last one off
         entries.pop();
     }
 
